@@ -1,4 +1,4 @@
-# tianyancha-dashboard
+# tianyancha-skill
 
 ![Skill](https://img.shields.io/badge/Skill-Kimi%20Work-111827?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -33,14 +33,14 @@
 
 ```bash
 mkdir -p ~/.kimi/daimon/skills
-git clone https://github.com/freestylefly/tianyancha-skill.git ~/.kimi/daimon/skills/tianyancha-dashboard
+git clone https://github.com/freestylefly/tianyancha-skill.git ~/.kimi/daimon/skills/tianyancha-skill
 ```
 
 如果你已经下载了源码，也可以直接复制目录：
 
 ```bash
 mkdir -p ~/.kimi/daimon/skills
-cp -r /path/to/tianyancha-dashboard ~/.kimi/daimon/skills/tianyancha-dashboard
+cp -r /path/to/tianyancha-skill ~/.kimi/daimon/skills/tianyancha-skill
 ```
 
 Windows PowerShell：
@@ -48,7 +48,7 @@ Windows PowerShell：
 ```powershell
 $skillsDir = "$env:USERPROFILE\.kimi\daimon\skills"
 New-Item -ItemType Directory -Force -Path $skillsDir
-Copy-Item -Recurse -Force "tianyancha-dashboard" "$skillsDir\tianyancha-dashboard"
+Copy-Item -Recurse -Force "tianyancha-skill" "$skillsDir\tianyancha-skill"
 ```
 
 安装后重启 Kimi Work，或重新加载 Agent。
@@ -106,7 +106,7 @@ Skill 会完成三件事：
 ## 文件结构
 
 ```text
-tianyancha-dashboard/
+tianyancha-skill/
 ├── SKILL.md
 ├── README.md
 └── scripts/
@@ -120,7 +120,7 @@ tianyancha-dashboard/
 ```python
 import sys
 
-sys.path.insert(0, "/path/to/tianyancha-dashboard/scripts")
+sys.path.insert(0, "/path/to/tianyancha-skill/scripts")
 from generate_dashboard import generate_dashboard
 
 filepath = generate_dashboard(company_data, "/path/to/output")
@@ -132,7 +132,7 @@ print(f"看板已生成: {filepath}")
 ```python
 import sys
 
-sys.path.insert(0, "/path/to/tianyancha-dashboard/scripts")
+sys.path.insert(0, "/path/to/tianyancha-skill/scripts")
 from generate_dashboard import generate_industry_dashboard
 
 filepath = generate_industry_dashboard(industry_data, "/path/to/output")
@@ -144,7 +144,7 @@ print(f"行业看板已生成: {filepath}")
 ```python
 import sys
 
-sys.path.insert(0, "/path/to/tianyancha-dashboard/scripts")
+sys.path.insert(0, "/path/to/tianyancha-skill/scripts")
 from generate_dashboard import generate_industry_with_companies
 
 result = generate_industry_with_companies(

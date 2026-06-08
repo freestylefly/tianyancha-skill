@@ -1,4 +1,4 @@
-# tianyancha-dashboard
+# tianyancha-skill
 
 天眼查企业洞察看板 Skill —— 输入企业名称，自动生成包含企业概况、在招岗位分析、数据分析、司法风险、融资历史、股东结构、知识产权、对外投资、主要人员的单文件 HTML 看板。
 
@@ -83,7 +83,7 @@
 
 ```python
 import sys
-sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-dashboard/scripts')
+sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-skill/scripts')
 from generate_dashboard import generate_dashboard
 
 # 请替换 {workspace_path} 为你的实际工作区路径，例如：
@@ -97,7 +97,7 @@ print(f"看板已生成: {filepath}")
 
 ```python
 import sys
-sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-dashboard/scripts')
+sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-skill/scripts')
 from generate_dashboard import generate_industry_dashboard
 
 filepath = generate_industry_dashboard(industry_data, '{workspace_path}')
@@ -110,7 +110,7 @@ print(f"行业看板已生成: {filepath}")
 
 ```python
 import sys
-sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-dashboard/scripts')
+sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-skill/scripts')
 from generate_dashboard import generate_industry_with_companies
 
 result = generate_industry_with_companies(
@@ -193,7 +193,7 @@ print(f"所有文件: {result['all_files']}")
 
 ```python
 import sys
-sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-dashboard/scripts')
+sys.path.insert(0, '~/.kimi/daimon/skills/tianyancha-skill/scripts')
 from generate_dashboard import generate_dashboard
 
 filepath = generate_dashboard(company_data, '{workspace_path}')
